@@ -1,3 +1,5 @@
 class Employee < ApplicationRecord
-  belongs_to :employee
+  self.primary_keys = :employee_id, :schedule_slot
+  belongs_to :employee, :optional => true
 end
+
