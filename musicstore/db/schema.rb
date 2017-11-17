@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(version: 20171030173253) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "employees", "schedules", column: "schedule_slot", primary_key: "schedule_slot", name: "fk_Employees_schedule1"
   add_foreign_key "orders", "employees", primary_key: "employee_id", name: "fk_transactions_Employees1"
   add_foreign_key "sales", "orders", primary_key: "order_id", name: "fk_sale_transaction1"
   add_foreign_key "sales", "products", primary_key: "product_id", name: "fk_sale_product1"
