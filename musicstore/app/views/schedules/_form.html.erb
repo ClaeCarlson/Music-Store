@@ -12,9 +12,13 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :schedule_slot %>
+    <%= form.text_field :schedule_schedule_slot, id: :schedule_schedule_slots %>
     <%= form.label :shift %>
     <%= form.text_field :shift, id: :schedule_shift %>
+
   </div>
+
 
   <div class="actions">
     <%= form.submit %>
