@@ -35,7 +35,7 @@ body, html {
    height: 100px;
  }
  .navbar {
-   height: 150px;
+   height: 10%;
    background-color: rgba(0,70,127,1);
  }
  .navbar-default .navbar-nav > li{
@@ -54,3 +54,14 @@ body, html {
  .navbar-default .navbar-nav > li > a:hover {
    color: green;
  }
+ 
+ .button {
+  color: #444;
+  display: block;
+  float: right;
+  font: normal 12px arial, sans-serif;
+  height: 24px;
+  margin-right: 6px;
+  padding-right: 18px; /* sliding doors padding */
+  text-decoration: none;
+}

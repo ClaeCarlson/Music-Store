@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Irb</title>
+    <title>Don't Fret</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -28,6 +28,7 @@
       <li><%= link_to "Orders", pages_orders_path %></li>
       <li><%= link_to "Inventory", pages_inventory_path %></li>
 	  <li><%= link_to "Reports", pages_reports_path %></li>
+	  <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
     </ul>
    </div>
 
@@ -35,13 +36,7 @@
     </nav>
 
   <body>
-    
-
-    <div class="container flash-container">
-      <% flash.each do |type, msg| %>
-        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
-      <% end %>
-    </div>
+   
     <%= yield %>
   </body>
 </html>

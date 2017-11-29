@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171030173253) do
+ActiveRecord::Schema.define(version: 20171129155514) do
 
   create_table "employees", primary_key: ["employee_id", "schedule_slot"], force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "employee_id", null: false
