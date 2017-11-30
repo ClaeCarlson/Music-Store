@@ -2,7 +2,7 @@
 
 <p>
   <strong>Transaction:</strong>
-  <%= @order.transaction %>
+  <%= @order.order %>
 </p>
 
 <p>
@@ -11,13 +11,13 @@
 </p>
 
 <p>
-  <strong>Employee:</strong>
-  <%= @order.employee %>
+  <strong>Date time:</strong>
+  <%= @order.date_time %>
 </p>
 
 <p>
-  <strong>Date time:</strong>
-  <%= @order.date_time %>
+  <strong>User Id:</strong>
+  <%= @order.users_id %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |

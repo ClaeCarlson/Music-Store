@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :transaction_id %>
+    <%= form.label :order_id %>
     <%= form.text_field :transaction_id, id: :order_transaction_id %>
   </div>
 
@@ -22,13 +22,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :employee_id %>
-    <%= form.text_field :employee_id, id: :order_employee_id %>
+    <%= form.label :date_time %>
+    <%= form.text_field :date_time, id: :order_date_time %>
   </div>
 
   <div class="field">
-    <%= form.label :date_time %>
-    <%= form.datetime_select :date_time, id: :order_date_time %>
+    <%= form.label :users_id %>
+    <%= form.datetime_select :users_id, id: :order_users_id %>
   </div>
 
   <div class="actions">

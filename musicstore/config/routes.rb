@@ -12,10 +12,10 @@ Rails.application.routes.draw do\
 
   resources :orders
   resources :schedules
-  resources :sales
   resources :products
   resources :employees
   
   devise_for :users
+  devise_for :admins
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,4 +1,3 @@
 class Order < ApplicationRecord
-  belongs_to :transaction
-  belongs_to :employee
+  belongs_to :order_status
 end
