@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :order_id %>
-    <%= form.text_field :transaction_id, id: :order_transaction_id %>
+    <%= form.text_field :order_id, id: :order_order_id %>
   </div>
 
   <div class="field">
@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= form.label :date_time %>
-    <%= form.text_field :date_time, id: :order_date_time %>
+    <%= form.datetime_select :date_time, id: :order_date_time %>
   </div>
 
   <div class="field">
     <%= form.label :users_id %>
-    <%= form.datetime_select :users_id, id: :order_users_id %>
+    <%= form.text_field :users_id, id: :order_users_id %>
   </div>
 
   <div class="actions">
