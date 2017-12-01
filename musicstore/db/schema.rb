@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171130172741) do
+ActiveRecord::Schema.define(version: 20171201065041) do
 
-  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "admins", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20171130172741) do
     t.datetime "last_sign_in_at"
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-    t.index ["email"], name: "index_admins_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+    t.index ["email"], name: "index_admins_on_email", unique: true, length: { email: 155 }
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, length: { reset_password_token: 155 }
   end
 
   create_table "employees", primary_key: "employee_id", id: :integer, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -55,7 +55,8 @@ ActiveRecord::Schema.define(version: 20171130172741) do
     t.string "product_type", limit: 45
     t.string "brand", limit: 45
     t.decimal "price", precision: 20
-    t.decimal "stock", precision: 20
+    t.decimal "stock", precision: 20, default: "25"
+    t.string "stock_level", limit: 45, default: "In Stock"
   end
 
   create_table "schedules", primary_key: "schedule_slot", id: :integer, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -81,6 +82,6 @@ ActiveRecord::Schema.define(version: 20171130172741) do
 
   add_foreign_key "orders", "users", column: "users_id", name: "fk_orders_users1"
   add_foreign_key "orders_has_products", "orders", column: "orders_order_id", primary_key: "order_id", name: "fk_orders_has_products_orders1"
-  add_foreign_key "orders_has_products", "orders", column: "orders_users_id", primary_key: "users_id", name: "fk_orders_has_products_orders1"
   add_foreign_key "orders_has_products", "products", column: "products_product_id", primary_key: "product_id", name: "fk_orders_has_products_products1"
+
 end
